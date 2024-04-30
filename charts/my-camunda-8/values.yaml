@@ -1,18 +1,19 @@
 global:
   multitenancy:
-    enabled: true
+    enabled: false
   image:
     tag: 8.4.5
   identity:
     auth:
       enabled: true
 
+## @section Identity Parameters
 identity:
   enabled: true
   fullURL: "http://localhost:8080"
   # for multi-tenancy
   postgresql:
-    enabled: true
+    enabled: false
 
 tasklist:
   enabled: true
