@@ -1,43 +1,46 @@
-identity:
-  enabled: true
-  fullURL: "http://localhost:8080"
-  # for multi-tenancy
-  postgresql:
-    enabled: false
-
-tasklist:
-  enabled: true
-
-optimize:
-  enabled: false
-
-connectors:
-  enabled: false
-
-# Reduce for Zeebe and Gateway the configured replicas and with that the required resources
-# to get it running locally
-zeebe:
-  clusterSize: 1
-  partitionCount: 1
-  replicationFactor: 1
-  # Request smaller persistent volumes.
-  pvcSize: 10Gi
-
-zeebe-gateway:
-  replicas: 1
-
-elasticsearch:
-  master:
-    replicaCount: 1
-    # Request smaller persistent volumes.
-    persistence:
-      size: 15Gi
-
 global:
   multitenancy:
-    enabled: false
+    enabled: true
   image:
     tag: 8.4.5
   identity:
     auth:
       enabled: true
+
+camunda-platform:
+  console:
+
+  identity:
+    enabled: true
+    fullURL: "http://localhost:8080"
+    # for multi-tenancy
+    postgresql:
+      enabled: true
+
+  tasklist:
+    enabled: true
+
+  optimize:
+    enabled: false
+
+  connectors:
+    enabled: false
+
+  # Reduce for Zeebe and Gateway the configured replicas and with that the required resources
+  # to get it running locally
+  zeebe:
+    clusterSize: 1
+    partitionCount: 1
+    replicationFactor: 1
+    # Request smaller persistent volumes.
+    pvcSize: 10Gi
+
+  zeebe-gateway:
+    replicas: 1
+
+  elasticsearch:
+    master:
+      replicaCount: 1
+      # Request smaller persistent volumes.
+      persistence:
+        size: 15Gi
