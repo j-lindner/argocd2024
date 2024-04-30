@@ -3,5 +3,5 @@ name: my-camunda-8
 version: 1.0.0
 dependencies:
   - name: camunda-platform
-    version: 9.3.2
+    version: 9.3.3
     repository: https://helm.camunda.io

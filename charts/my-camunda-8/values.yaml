@@ -2,7 +2,7 @@ global:
   multitenancy:
     enabled: true
   image:
-    tag: 8.4.5
+    tag: 8.4.6
   identity:
     auth:
       enabled: true
