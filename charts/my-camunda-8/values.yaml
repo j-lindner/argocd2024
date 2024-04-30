@@ -1,21 +1,16 @@
 global:
-  multitenancy:
-    enabled: true
   image:
     tag: 8.4.6
   identity:
     auth:
-      enabled: true
+      enabled: false
 
 camunda-platform:
   console:
+    enabled: false
 
   identity:
-    enabled: true
-    fullURL: "http://localhost:8080"
-    # for multi-tenancy
-    postgresql:
-      enabled: true
+    enabled: false
 
   tasklist:
     enabled: true
