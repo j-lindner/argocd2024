@@ -1,0 +1,7 @@
+apiVersion: v2
+name: my-camunda-8
+version: 1.0.0
+dependencies:
+  - name: camunda-platform
+    version: 9.3.2
+    repository: https://helm.camunda.io
